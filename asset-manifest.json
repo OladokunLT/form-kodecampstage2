@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/form-kodecampstage2/static/css/main.073c9b0a.css",
-    "main.js": "/form-kodecampstage2/static/js/main.236bbd59.js",
+    "main.js": "/form-kodecampstage2/static/js/main.5dc4c10d.js",
     "static/js/787.bdacfd5b.chunk.js": "/form-kodecampstage2/static/js/787.bdacfd5b.chunk.js",
     "static/media/logo.svg": "/form-kodecampstage2/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/form-kodecampstage2/index.html",
     "main.073c9b0a.css.map": "/form-kodecampstage2/static/css/main.073c9b0a.css.map",
-    "main.236bbd59.js.map": "/form-kodecampstage2/static/js/main.236bbd59.js.map",
+    "main.5dc4c10d.js.map": "/form-kodecampstage2/static/js/main.5dc4c10d.js.map",
     "787.bdacfd5b.chunk.js.map": "/form-kodecampstage2/static/js/787.bdacfd5b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.236bbd59.js"
+    "static/js/main.5dc4c10d.js"
   ]
 }
