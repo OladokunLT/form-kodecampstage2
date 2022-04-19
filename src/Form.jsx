@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export class Form extends Component {
     constructor(props){
         super(props);
-        this.state = {fnameValue: "", selVal: "Male", adresDesc: "", bioDesc: ""};
+        this.state = {fnameValue: "", selVal: "Male", adresValue: "",  bioValue: ""};
      // this.handleChange = this.handleChange.bind(this);
     }
 
@@ -27,7 +27,7 @@ export class Form extends Component {
 
     handleAdresChange = (event) => {
       console.log(this.target.value);
-      this.setState({adresDesc: event.target.value});
+      this.setState({adresValue: event.target.value});
     }
 
     handleBioChange = (event) => {
@@ -70,12 +70,12 @@ export class Form extends Component {
 
            <label>
             <div>Address</div>
-            <textarea name="" id="name" value= {this.state.adresDesc} onChange= {this.handleAdresChange} />
+            <textarea name="" id="" value= {this.state.adresValue} onChange= {this.handleAdresChange} />
           </label>
 
           <label>
             <div>Bio</div>
-            <textarea name="" id="name" value= {this.state.bioDesc} onChange= {this.handleBioChange} />
+            <textarea name="" id="" value= {this.state.bioValue} onChange= {this.handleBioChange} />
           </label>
         
           <div>
@@ -83,7 +83,12 @@ export class Form extends Component {
           </div>
         </form>
 
-        
+        <p> First name: {this.state.fnameValue} </p>
+        <p> Last name: {this.state.lnameValue} </p>
+        <p> Email address: {this.state.emailValue} </p>
+        <p> Gender: {this.state.selVal} </p>
+        <p> Address: {this.state.adresValue} </p>
+        <p> Bio: {this.state.bioValue} </p>
       </>
     );
   }
