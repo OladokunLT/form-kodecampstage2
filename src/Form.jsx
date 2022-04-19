@@ -3,17 +3,17 @@ import React, { Component } from "react";
 export class Form extends Component {
     constructor(props){
         super(props);
-        this.state = {fnameValue: "", selVal: "Male", adresValue: "",  bioValue: ""};
+        this.state = { fnameValue: "", selVal: "Male", adresValue: "" };
      // this.handleChange = this.handleChange.bind(this);
     }
 
     handleFnameChange = (event) =>{
-      console.log(this.state.fnameValue);
+      //console.log(this.state.fnameValue);
       this.setState({ fnameValue: event.target.value });
     }
 
     handleLnameChange = (event) => {
-      console.log(this.state.lnameValue);
+     // console.log(event.target.value);
       this.setState({lnameValue: event.target.value});
     }
 
@@ -26,17 +26,17 @@ export class Form extends Component {
     }
 
     handleAdresChange = (event) => {
-      console.log(this.target.value);
+      console.log(event.target.value);
       this.setState({adresValue: event.target.value});
     }
 
     handleBioChange = (event) => {
-      console.log(this.target.value);
-      this.setState({bioDesc: event.target.value});
+      console.log(event.target.value);
+      this.setState({bioValue: event.target.value});
     }
 
     handleSubmit = (event) => {
-      console.log(this.state.fnameValue, this.state.lnameValue, this.state.emailValue, this.state.selVal, this.state.adresValue,);
+      console.log(this.state.fnameValue, this.state.lnameValue, this.state.emailValue, this.state.selVal, this.state.adresValue, this.state.bioValue);
       event.preventDefault();
     };
 
@@ -70,12 +70,12 @@ export class Form extends Component {
 
            <label>
             <div>Address</div>
-            <textarea name="" id="" value= {this.state.adresValue} onChange= {this.handleAdresChange} />
+            <textarea name="adresValue" id="adresname" value= {this.state.adresValue} onChange= {this.handleAdresChange} />
           </label>
 
           <label>
             <div>Bio</div>
-            <textarea name="" id="" value= {this.state.bioValue} onChange= {this.handleBioChange} />
+            <textarea name="name" id="bioname" value= {this.state.bioValue} onChange= {this.handleBioChange} />
           </label>
         
           <div>
