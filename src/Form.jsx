@@ -3,8 +3,8 @@ import React, { Component } from "react";
 export class Form extends Component {
     constructor(props){
         super(props);
-        this.state = { fnameValue: "", lnameValue: "", emailValue: "", selVal: "Male", adresValue: "" };
-     // this.handleChange = this.handleChange.bind(this);
+        this.state = { fnameValue: "", lnameValue: "", emailValue: "", selVal: "Male", adresValue: "", bioValue: "" };
+     
     }
 
     handleFnameChange = (event) =>{
@@ -36,7 +36,7 @@ export class Form extends Component {
     }
 
     handleSubmit = (event) => {
-      console.log(this.state.fnameValue, this.state.lnameValue, this.state.emailValue, this.state.selVal, this.state.adresValue, this.state.bioValue);
+      console.log(this.state);
       event.preventDefault();
     };
 
@@ -51,12 +51,12 @@ export class Form extends Component {
 
           <label>
             <div>Last name</div>
-            <input type="text" name="lname" id="lname" onChange={this.handleLnameChange}/>
+            <input type="text" name="lname" id="lname" value={this.state.lname} onChange={this.handleLnameChange}/>
           </label>
 
           <label>
             <div>Email</div>
-            <input type="email" name="email" id="email" onChange={this.handleEmailChange}/>
+            <input type="email" name="email" id="email" value={this.state.email} onChange={this.handleEmailChange}/>
           </label>
 
           <label>
@@ -82,13 +82,6 @@ export class Form extends Component {
             <button type="submit" >Submit</button>
           </div>
         </form>
-
-        {/* <p> First name: {handleSubmit.fnameValue} </p>
-        <p> Last name: {this.handleSubmit.lnameValue} </p>
-        <p> Email address: {this.handleSubmit.emailValue} </p>
-        <p> Gender: {this.handleSubmit.selVal} </p>
-        <p> Address: {this.handleSubmit.adresValue} </p>
-        <p> Bio: {this.handleSubmit.bioValue} </p> */}
 
         <p> First name: { this.state.fnameValue} </p>
         <p> Last name: {this.state.lnameValue} </p>
