@@ -3,7 +3,7 @@ import React, { Component } from "react";
 export class Form extends Component {
     constructor(props){
         super(props);
-        this.state = { fnameValue: "", selVal: "Male", adresValue: "" };
+        this.state = { fnameValue: "", lnameValue: "", emailValue: "", selVal: "Male", adresValue: "" };
      // this.handleChange = this.handleChange.bind(this);
     }
 
@@ -26,12 +26,12 @@ export class Form extends Component {
     }
 
     handleAdresChange = (event) => {
-      console.log(event.target.value);
+      //console.log(event.target.value);
       this.setState({adresValue: event.target.value});
     }
 
     handleBioChange = (event) => {
-      console.log(event.target.value);
+      //console.log(event.target.value);
       this.setState({bioValue: event.target.value});
     }
 
@@ -46,17 +46,17 @@ export class Form extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             <div>First name</div>
-            <input type="text" name="" id="fname" onChange={this.handleFnameChange}/>
+            <input type="text" name="fnameValue" id="fname" value={this.state.fname} onChange={this.handleFnameChange}/>
           </label>
 
           <label>
             <div>Last name</div>
-            <input type="text" name="" id="lname" onChange={this.handleLnameChange}/>
+            <input type="text" name="lname" id="lname" onChange={this.handleLnameChange}/>
           </label>
 
           <label>
             <div>Email</div>
-            <input type="email" name="name" id="email" onChange={this.handleEmailChange}/>
+            <input type="email" name="email" id="email" onChange={this.handleEmailChange}/>
           </label>
 
           <label>
@@ -83,12 +83,19 @@ export class Form extends Component {
           </div>
         </form>
 
-        <p> First name: {this.state.fnameValue} </p>
+        {/* <p> First name: {handleSubmit.fnameValue} </p>
+        <p> Last name: {this.handleSubmit.lnameValue} </p>
+        <p> Email address: {this.handleSubmit.emailValue} </p>
+        <p> Gender: {this.handleSubmit.selVal} </p>
+        <p> Address: {this.handleSubmit.adresValue} </p>
+        <p> Bio: {this.handleSubmit.bioValue} </p> */}
+
+        <p> First name: { this.state.fnameValue} </p>
         <p> Last name: {this.state.lnameValue} </p>
         <p> Email address: {this.state.emailValue} </p>
         <p> Gender: {this.state.selVal} </p>
-        <p> Address: {this.state.adresValue} </p>
-        <p> Bio: {this.state.bioValue} </p>
+        <p> Address: {this.state.adresValue } </p>
+        <p> Bio: {this.state.bioValue} </p> 
       </>
     );
   }
