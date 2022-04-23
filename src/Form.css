@@ -1,0 +1,38 @@
+.form {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: darkseagreen;
+}
+
+card {
+    margin: 5px;
+    
+}
+
+.d-flex {
+    display: flex;
+    padding: 2px;
+    flex-wrap: wrap;
+}
+form div,
+.title {
+    font-weight: bold;
+    width: 80px;
+    text-align: start;
+}
+
+.user-input {
+    font-family: cursive;
+}
+
+.btn {
+    padding: 10px 50px;
+    margin: 5px;
+    background-color: greenyellow;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
